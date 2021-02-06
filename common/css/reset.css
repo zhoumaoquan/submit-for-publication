@@ -1,0 +1,236 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a,
+input,
+button {
+    /*清除点击阴影*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input,
+button {
+    /*清除圆角*/
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+body {
+    margin: 0;
+    /*禁止选中文字*/
+    -webkit-user-select: none;
+    /*用户横竖屏切换的时候，禁止字体缩放*/
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    background-color: #fff;
+    font: 12px/1.5 'Microsoft YaHei', 'Heiti SC', tahoma, arial, 'Hiragino Sans GB', \\5B8B\4F53, sans-serif;
+    color: #666;
+}
+/* html, body {
+    scroll-behavior: smooth;
+} */
+h1 {
+    margin: 0;
+}
+
+a {
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    outline: none；
+}
+
+a:link,
+a:hover,
+a:active,
+a:visited {
+    background-color: transparent;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+b {
+    font-weight: bold;
+}
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.hide,
+.none {
+    display: none;
+}
+
+/*清除浮动*/
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+
+.clearfix {
+    *zoom: 1
+}
+
+.fl {
+    float: left !important;
+}
+
+.fr {
+    float: right !important;
+}
+
+
+/* 文字超出省略 单行 */
+.ellipsis {
+    overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.multiline {
+    overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	word-break: break-all;
+	-webkit-box-orient: vertical;
+	/* -webkit-line-clamp: 3;  */
+}

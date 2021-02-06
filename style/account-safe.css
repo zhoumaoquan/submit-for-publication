@@ -1,0 +1,102 @@
+html, body {
+	height: 100%;
+}
+.title {
+	padding-bottom: .3rem;
+}
+.layui-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex: 1;
+}
+.layui-tab {
+	margin: 0;
+}
+.layui-tab-title {
+	margin-right: .54rem;
+	border-bottom: .04rem solid #F0F0F0;
+}
+.layui-tab-title li {
+	margin-right: .7rem;
+	padding: 0;
+	min-width: auto;
+	font-weight: bold;
+	font-size: .2rem;
+}
+.layui-tab-brief>.layui-tab-title .layui-this {
+	color: #4C97C3;
+}
+.layui-tab-brief>.layui-tab-title .layui-this::after {
+	top: 100%;
+	height: .04rem;
+	background: #4C97C3;
+	border-radius: .02rem;
+	border: 0;
+}
+.set {
+	flex: 1;
+}
+.set .layui-tab {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+}
+.layui-tab-content {
+	flex: 1;
+	padding: .3rem 0 0 0;
+	box-sizing: border-box;
+}
+.layui-tab-item {
+	height: 100%;
+}
+.layui-tab-item form {
+	height: 100%;
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.form-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 6.86rem;
+	height: .68rem;
+	font-size: .18rem;
+	font-weight: bold;
+	color: #4D4D4D;
+}
+.form-item input {
+	width: 5.25rem;
+	height: .45rem;
+	font-size: .2rem;
+}
+.form-item .text {
+	padding-left: .2rem;
+	width: 5.25rem;
+	font-size: .2rem;
+	box-sizing: border-box;
+}
+.code {
+	position: relative;
+}
+.code input {
+	padding-right: 1.5rem;
+}
+.code button{
+	position: absolute;
+	height: 100%;
+	top: 0;
+	right: .2rem;
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+	font-size: .18rem;
+	font-weight: 600;
+	color: #DD4C40;
+}
+.code button[disabled] {
+	color: #333;
+}

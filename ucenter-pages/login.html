@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>英利文-登录</title>
+	<link rel="shortcut icon" href="../static/logo.png">
+	<link rel="stylesheet" href="../common/css/reset.css">
+	<link rel="stylesheet" href="../common/css/ucomm.css">
+	<link rel="stylesheet" href="../layui/css/layui.css">
+	<link rel="stylesheet" href="../style/login.css">
+</head>
+
+<body>
+	<div class="container">
+		<h1 class="logo" title="英利文">
+			<image src="../static/logo.png" />
+		</h1>
+		<main class="login-box">
+			<!-- 登录 -->
+			<section class="login clearfix layui-anim layui-anim-up">
+				<image src="../static/ucenter/image/login-l.png" class="login-l fl"/>
+				<div class="login-r fr">
+					<h2 class="login-title">用户登录</h2>
+					<form class="form layui-form" action="">
+					  <div class="form-item">
+					    <label class="inp-label" for="username">用户账号</label>
+					    <div class="inp-box" >
+							<img src="../static/ucenter/icon/user.png" >
+							<div class="line"></div>
+							<input id="username" type="text" lay-vertype="tips" class="layui-input" required  lay-verify="required" placeholder="请输入账号">
+					    </div>
+					  </div>
+					  <div class="form-item">
+					    <label class="inp-label" for="password">登录密码</label>
+					    <div class="inp-box" >
+							<img src="../static/ucenter/icon/unlock.png" >
+							<div class="line"></div>
+							<input id="password" type="password" lay-vertype="tips" class="layui-input" required  lay-verify="required" placeholder="请输入密码">
+					    </div>
+					  </div>
+					  <button class="layui-btn btn-confirm" lay-submit lay-filter="formDemo">登录</button>
+					</form>
+					<div class="forgetpsw">
+						<a >忘记密码？</a>
+					</div>
+					<p class="btn-regist">还没有账号？<a>去注册</a></p>
+				</div>
+			</section>
+			<!-- 注册 -->
+			<section class="regist layui-anim layui-anim-up">
+				<h2 class="login-title">注册账号</h2>
+				<form class="form layui-form" action="">
+					<div class="clearfix form-box">
+						<div class="form-left fl">
+							<div class="form-item">
+								<label class="inp-label" for="username">用户账号</label>
+								<div class="inp-box" >
+									<img src="../static/ucenter/icon/user.png" >
+									<div class="line"></div>
+									<input id="username" type="text" required lay-vertype="tips" class="layui-input"  lay-verify="required" placeholder="请输入账号">
+								</div>
+							</div>
+							<div class="form-item">
+								<label class="inp-label" for="verify">验证方式</label>
+								<div class="inp-box" >
+									<img src="../static/ucenter/icon/safe.png" >
+									<div class="line"></div>
+									<input id="verify" type="text" required lay-vertype="tips" class="layui-input"  lay-verify="required|" placeholder="请输入手机号/邮箱号">
+								</div>
+							</div>
+							<div class="form-item vcode">
+								<div class="inp-box" >
+									<input id="vcode" type="text" required class="layui-input" lay-verify="required" placeholder="验证码">
+								</div>
+								<button type="button" class="getcode fr">获取验证码</button>
+							</div>
+							<div class="form-item">
+								<label class="inp-label" for="password">登录密码</label>
+								<div class="inp-box" >
+									<img src="../static/ucenter/icon/unlock.png" >
+									<div class="line"></div>
+									<input id="password" type="password" required lay-vertype="tips" class="layui-input" lay-verify="required" placeholder="请输入登录密码">
+								</div>
+							</div>
+						</div>
+						<div class="form-right fr">
+							<div class="form-item">
+								<label class="inp-label" for="repassword">确认密码</label>
+								<div class="inp-box" >
+									<img src="../static/ucenter/icon/lock.png" >
+									<div class="line"></div>
+									<input id="repassword" type="password" required lay-vertype="tips" class="layui-input" lay-verify="required" placeholder="请输入密码">
+								</div>
+							</div>
+							<div class="form-item">
+								<label class="inp-label" for="code">推荐码</label>
+								<div class="inp-box" >
+									<input id="code" type="text" required lay-vertype="tips" class="layui-input" lay-verify="required" placeholder="请输入推荐码">
+								</div>
+								<p class="agree">注册即同意<a>《英利文协议》</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="regist-confirm">
+						<button class="layui-btn btn-confirm" lay-submit lay-filter="formDemo">注册即同意协议</button>
+					</div>
+					<div class="return">
+						<a>返回登录</a>
+					</div>
+				</form>
+			</section>
+			<!-- 忘记密码 -->
+			<section class="forget layui-anim layui-anim-up">
+				<h2 class="login-title">忘记密码</h2>
+				<div class="forget-tab">
+					<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+						<ul class="layui-tab-title">
+							<li class="layui-this">邮箱找回</li>
+							<li>手机找回</li>
+						</ul>
+						<div class="layui-tab-content">
+							<!-- 邮箱找回 -->
+							<div class="layui-tab-item layui-show">
+								<form class="form layui-form" action="">
+								  <div class="form-item">
+								    <label class="inp-label" for="femail">用户邮箱</label>
+								    <div class="inp-box" >
+										<img src="../static/ucenter/icon/email.png" >
+										<div class="line"></div>
+										<input id="femail" type="text" class="layui-input" required lay-vertype="tips" lay-verify="email|required" placeholder="请输入邮箱号">
+								    </div>
+								  </div>
+								  <div class="form-item vcode">
+								  	<div class="inp-box" >
+								  		<input id="vcodee" type="text" class="layui-input" required lay-verify="required" placeholder="验证码">
+								  	</div>
+								  	<button type="button" class="getcode-fe fr">获取验证码</button>
+								  </div>
+								  <div class="form-item">
+								    <label class="inp-label" for="fepassword">登录密码</label>
+								    <div class="inp-box" >
+										<img src="../static/ucenter/icon/unlock.png" >
+										<div class="line"></div>
+										<input id="fepassword" class="layui-input" type="password" lay-vertype="tips" required  lay-verify="required" placeholder="请输入登录密码">
+								    </div>
+								  </div>
+								  <div class="form-item">
+								    <label class="inp-label" for="ferpassword">确认密码</label>
+								    <div class="inp-box" >
+								  		<img src="../static/ucenter/icon/lock.png" >
+								  		<div class="line"></div>
+								  		<input id="ferpassword" class="layui-input" type="password" required lay-vertype="tips" lay-verify="required" placeholder="请输入密码">
+								    </div>
+								  </div>
+								  <button class="layui-btn btn-confirm" lay-submit lay-filter="formDemo">确认</button>
+								  <div class="return">
+								  	<a>返回登录</a>
+								  </div>
+								</form>
+							</div>
+							<!-- 手机找回 -->
+							<div class="layui-tab-item" >
+								<form class="form layui-form" action="">
+								  <div class="form-item">
+								    <label class="inp-label" for="fphone">用户手机</label>
+								    <div class="inp-box" >
+										<img src="../static/ucenter/icon/phone.png" >
+										<div class="line"></div>
+										<input id="fphone" type="text" class="layui-input" required lay-vertype="tips" lay-verify="phone|required" placeholder="请输入手机号">
+								    </div>
+								  </div>
+								  <div class="form-item vcode">
+								  	<div class="inp-box" >
+								  		<input id="vcodep" type="text" class="layui-input" required lay-verify="required" placeholder="验证码">
+								  	</div>
+								  	<button type="button" class="getcode-fp fr">获取验证码</button>
+								  </div>
+								  <div class="form-item">
+								    <label class="inp-label" for="fppassword">登录密码</label>
+								    <div class="inp-box" >
+										<img src="../static/ucenter/icon/unlock.png" >
+										<div class="line"></div>
+										<input id="fppassword" type="password" class="layui-input" required lay-vertype="tips" lay-verify="required" placeholder="请输入登录密码">
+								    </div>
+								  </div>
+								  <div class="form-item">
+								    <label class="inp-label" for="fprpassword">确认密码</label>
+								    <div class="inp-box" >
+								  		<img src="../static/ucenter/icon/lock.png" >
+								  		<div class="line"></div>
+								  		<input id="fprpassword" type="password" class="layui-input" required lay-vertype="tips" lay-verify="required" placeholder="请输入密码">
+								    </div>
+								  </div>
+								  <button class="layui-btn btn-confirm" lay-submit lay-filter="formDemo">确认</button>
+								  <div class="return">
+								  	<a>返回登录</a>
+								  </div>
+								</form>
+							</div>
+						</div>
+					</div> 
+				</div>   
+			</section>
+		</main>
+	</div>
+	<script src="../layui/layui.js"></script>
+	<script src="../utils/jquery-3.5.1.min.js"></script>
+	<script src="../js/login.js" ></script>
+</body>
+</html>

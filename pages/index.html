@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>英利文-首页</title>
+	<link rel="shortcut icon" href="../static/logo.png">
+	<link rel="stylesheet" href="../common/css/reset.css">
+	<link rel="stylesheet" href="../utils/swiper-3.4.2.min.css">
+	<link rel="stylesheet" href="../layui/css/layui.css">
+	<link rel="stylesheet" href="../common/css/comm.css">
+	<link rel="stylesheet" href="../style/index.css">
+
+	<style>
+		.popup-box {
+			width: 500px;
+			height: 360px;
+			border-radius: 5px;
+			position: fixed;
+			left: 50%;
+			top: 360px;
+			transform: translate(-50%);
+			z-index: 9999;
+			background-color: #ffffff;
+			box-shadow: 0 0  30px 0 rgba(0, 0, 0, .1);
+		}
+		.popup-box-close {
+			position: absolute;
+			right: 20px;
+			top: 15px;
+			font-size: 30px;
+			color: #999999;
+			font-weight: 400;
+		}
+		.popup-box-item {
+			width: 350px;
+			height: 60px;
+			border: 1px solid #eee;
+			line-height: 60px;
+			text-align: center;
+			font-size: 20px;
+			color: #333333;
+			margin: 0 auto;
+			margin-bottom: 30px;
+			border-radius: 5px;
+			box-shadow: 2px 0 5px 0 rgba(0, 0, 0, .1);
+			transition: all 0.s;
+		}
+		.popup-box-item:hover {
+			background-color: #FA5422;
+			color: #ffffff;
+			font-weight: bold;
+		}
+		.popup-box-item:first-child {
+			margin-top: 60px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<!-- 公共header -->
+	<header class="header-container">
+		<div class="w clearfix position-r">
+			<!-- logo -->
+			<h1 class="header-logo fl">
+				<a class="header-logo__link" href="../pages/index.html">英利文</a>
+			</h1>
+
+			<!-- title -->
+			<h2 class="header-title fl">专注生命科学领域的润色及科研培训机构</h2>
+
+			<!-- 联系方式 -->
+			<div class="header-contact fr">
+				<ul>
+					<li class="header-contact-item fl">
+						<img class="__icon" src="../static/icon/icon-qq.png" />
+						<span class="__text">1039444075</span>
+					</li>
+					<li class="header-contact-item fr">
+						<img class="__icon" src="../static/icon/icon-phone.png" />
+						<span class="__text">400-652-1881</span>
+					</li>
+					<li class="header-contact-item fl">
+						<img class="__icon" src="../static/icon/icon-wx.png" />
+						<span class="__text">Enlivenedit</span>
+					</li>
+					<li class="header-contact-item fr">
+						<img class="__icon" src="../static/icon/icon-mail.png" />
+						<span class="__text">info@enlivenedit.com</span>
+					</li>
+					<li class="header-contact-item fl">
+						<img class="__icon" src="../static/icon/icon-time.png" />
+						<span class="__text">周一至周五 8:30-18:30 | 周六至周日 9:00-17:00 </span>
+					</li>
+				</ul>
+			</div>
+
+			<!-- 登陆按钮 -->
+			<!-- <div class="header-login-btn">
+				<a href="###">登录/注册</a>
+			</div> -->
+			<!-- 已登录 -->
+			<div class="header-login-ui ellipsis">
+				<img src="../static/icon/hezuo-3.png" alt="">
+				<p>小仙女</p>
+			</div>
+		</div>
+	</header>
+
+	<!-- 导航条 -->
+	<nav class="nav-container" id="navBox">
+		<div class="w clearfix position-r">
+			<div class="nav-item fl">
+				<a class="nav-item__title" href="###">英文润色</a>
+				<!-- 单个导航条 对应内容 -->
+				<div class="nav-item__wrapper">
+					<ul class="nav-item__wrapper__ul">
+						<li class="nav-item__wrapper__li fl">
+							<!-- 表示 -->
+							<div class="__make">
+								<img src="../static/image/zekou.png">
+							</div>
+							<div class="__title ellipsis">
+								<span>同行专家深度编辑</span>
+								<!-- 推荐图标 -->
+								<img src="../static/icon/icon-link.png" />
+							</div>
+							<p class="__text multiline">
+								英文润色基础上，同行资深专业编辑对
+								内容进行审核，提供学术批注及同行评
+								议报告，指导文章全面提升。
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="nav-item fl">
+				<a class="nav-item__title" href="###">投稿服务</a>
+				<!-- 单个导航条 对应内容 -->
+				<div class="nav-item__wrapper">
+					<ul class="nav-item__wrapper__ul">
+						<li class="nav-item__wrapper__li fl">
+							<!-- 表示 -->
+							<div class="__make">
+								<img src="../static/image/zekou.png">
+							</div>
+							<div class="__title ellipsis">
+								<span>同行专家深度编辑</span>
+								<!-- 推荐图标 -->
+								<img src="../static/icon/icon-link.png" />
+							</div>
+							<p class="__text multiline">
+								英文润色基础上，同行资深专业编辑对
+								内容进行审核，提供学术批注及同行评
+								议报告，指导文章全面提升。
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="nav-btn fr">
+				<span>获取报价</span>
+			</div>
+		</div>
+	</nav>
+
+	<div class="swiper-box">
+		<!-- 轮播图 -->
+		<div class="layui-carousel" id="test1">
+			<div carousel-item>
+				<div>
+					<img class="banner-img" src="../static/image/bannner-1.png" alt="">
+				</div>
+				<div>
+					<img class="banner-img" src="../static/image/bannner-1.png" alt="">
+				</div>
+				<div>
+					<img class="banner-img" src="../static/image/bannner-1.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 侧边栏 -->
+	<div class="sidebar-container">
+		<ul>
+			<li class="sidebar-item">
+				<a href="###">
+					<!-- 图标 -->
+					<img class="sidebar-item__icon" src="../static/icon/sile-1.png" />
+					<div class="sidebar-item__text">QQ咨询</div>
+				</a>
+			</li>
+			<li class="sidebar-item">
+				<a href="###" class="scan-wx">
+					<!-- 图标 -->
+					<img class="sidebar-item__icon" src="../static/icon/sile-2.png" />
+					<div class="sidebar-item__text">微信咨询</div>
+
+					<!-- 二维码 -->
+					<div class="sidebar-item-popup">
+						<img class="sidebar-er-code" src="../static/image/erweima.png">
+						<p>请扫描微信二维码</p>
+					</div>
+				</a>
+			</li>
+			<li class="sidebar-item">
+				<a href="###">
+					<!-- 图标 -->
+					<img class="sidebar-item__icon" src="../static/icon/sile-3.png" />
+					<div class="sidebar-item__text">客服咨询</div>
+				</a>
+			</li>
+			<li class="sidebar-item">
+				<a href="###">
+					<!-- 图标 -->
+					<div class="sidebar-item__text mg-t-10">立即</div>
+					<div class="sidebar-item__text">下单</div>
+				</a>
+			</li>
+			<li class="sidebar-item">
+				<a href="javascript:;" id="backTop">
+					<!-- 图标 -->
+					<img class="sidebar-item__icon" src="../static/icon/sile-4.png" />
+					<div class="sidebar-item__text">回到顶部</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<!-- 服务内容 -->
+	<div class="app-box bg-b">
+		<div class="w">
+			<div class="app-title">
+				<h3>服务内容</h3>
+				<p class="app-title-text">专门为生命科学研究者和企业提供英文编校润色、培训、和期刊发表协助-专心、专注、专业、专长</p>
+			</div>
+			<div class="service-box clearfix">
+				<div class="service-box-item fl">
+					<div class="service-box-item__not">
+						<img class="service-box-item__bg" src="../static/image/bg-1.png" />
+						<img class="service-box-item__icon" src="../static/image/zekou.png" />
+						<div class="service-box-item__text">
+							<p>同行专家深度编辑</p>
+						</div>
+					</div>
+					<div class="service-box-item__active">
+						<p class="service-box-item__title">英文润色服务</p>
+						<p class="service-box-item__p">
+							修改语言语法及逻辑。使论文整体表达流
+							畅，文风专业，达到母语为英语的专业学
+							者写作水平。
+						</p>
+					</div>
+				</div>
+				<div class="service-box-item fl">
+					<div class="service-box-item__not">
+						<img class="service-box-item__bg" src="../static/image/bg-1.png" />
+						<img class="service-box-item__icon" src="../static/image/zekou.png" />
+						<div class="service-box-item__text">
+							<p>同行专家深度编辑</p>
+						</div>
+					</div>
+					<div class="service-box-item__active">
+						<p class="service-box-item__title">英文润色服务</p>
+						<p class="service-box-item__p">
+							修改语言语法及逻辑。使论文整体表达流
+							畅，文风专业，达到母语为英语的专业学
+							者写作水平。
+						</p>
+					</div>
+				</div>
+				<div class="service-box-item fl">
+					<div class="service-box-item__not">
+						<img class="service-box-item__bg" src="../static/image/bg-1.png" />
+						<img class="service-box-item__icon" src="../static/image/zekou.png" />
+						<div class="service-box-item__text">
+							<p>同行专家深度编辑</p>
+						</div>
+					</div>
+					<div class="service-box-item__active">
+						<p class="service-box-item__title">英文润色服务</p>
+						<p class="service-box-item__p">
+							修改语言语法及逻辑。使论文整体表达流
+							畅，文风专业，达到母语为英语的专业学
+							者写作水平。
+						</p>
+					</div>
+				</div>
+				<div class="service-box-item fl">
+					<div class="service-box-item__not">
+						<img class="service-box-item__bg" src="../static/image/bg-1.png" />
+						<img class="service-box-item__icon" src="../static/image/zekou.png" />
+						<div class="service-box-item__text">
+							<p>同行专家深度编辑</p>
+						</div>
+					</div>
+					<div class="service-box-item__active">
+						<p class="service-box-item__title">英文润色服务</p>
+						<p class="service-box-item__p">
+							修改语言语法及逻辑。使论文整体表达流
+							畅，文风专业，达到母语为英语的专业学
+							者写作水平。
+						</p>
+					</div>
+				</div>
+				<div class="service-box-item fl">
+					<div class="service-box-item__not">
+						<img class="service-box-item__bg" src="../static/image/bg-1.png" />
+						<img class="service-box-item__icon" src="../static/image/zekou.png" />
+						<div class="service-box-item__text">
+							<p>同行专家深度编辑</p>
+						</div>
+					</div>
+					<div class="service-box-item__active">
+						<p class="service-box-item__title">英文润色服务</p>
+						<p class="service-box-item__p">
+							修改语言语法及逻辑。使论文整体表达流
+							畅，文风专业，达到母语为英语的专业学
+							者写作水平。
+						</p>
+					</div>
+				</div>
+				<div class="service-box-item fl">
+					<div class="service-box-item__not">
+						<img class="service-box-item__bg" src="../static/image/bg-1.png" />
+						<img class="service-box-item__icon" src="../static/image/zekou.png" />
+						<div class="service-box-item__text">
+							<p>同行专家深度编辑</p>
+						</div>
+					</div>
+					<div class="service-box-item__active">
+						<p class="service-box-item__title">英文润色服务</p>
+						<p class="service-box-item__p">
+							修改语言语法及逻辑。使论文整体表达流
+							畅，文风专业，达到母语为英语的专业学
+							者写作水平。
+						</p>
+					</div>
+				</div>
+				<div class="service-box-item fl">
+					<div class="service-box-item__not">
+						<img class="service-box-item__bg" src="../static/image/bg-1.png" />
+						<img class="service-box-item__icon" src="../static/image/zekou.png" />
+						<div class="service-box-item__text">
+							<p>同行专家深度编辑</p>
+						</div>
+					</div>
+					<div class="service-box-item__active">
+						<p class="service-box-item__title">英文润色服务</p>
+						<p class="service-box-item__p">
+							修改语言语法及逻辑。使论文整体表达流
+							畅，文风专业，达到母语为英语的专业学
+							者写作水平。
+						</p>
+					</div>
+				</div>
+				<div class="service-box-item fl">
+					<div class="service-box-item__not">
+						<img class="service-box-item__bg" src="../static/image/bg-1.png" />
+						<img class="service-box-item__icon" src="../static/image/zekou.png" />
+						<div class="service-box-item__text">
+							<p>同行专家深度编辑</p>
+						</div>
+					</div>
+					<div class="service-box-item__active">
+						<p class="service-box-item__title">英文润色服务</p>
+						<p class="service-box-item__p">
+							修改语言语法及逻辑。使论文整体表达流
+							畅，文风专业，达到母语为英语的专业学
+							者写作水平。
+						</p>
+					</div>
+				</div>
+				<div class="service-box-item fl">
+					<div class="service-box-item__not">
+						<img class="service-box-item__bg" src="../static/image/bg-1.png" />
+						<img class="service-box-item__icon" src="../static/image/zekou.png" />
+						<div class="service-box-item__text">
+							<p>同行专家深度编辑</p>
+						</div>
+					</div>
+					<div class="service-box-item__active">
+						<p class="service-box-item__title">英文润色服务</p>
+						<p class="service-box-item__p">
+							修改语言语法及逻辑。使论文整体表达流
+							畅，文风专业，达到母语为英语的专业学
+							者写作水平。
+						</p>
+					</div>
+				</div>
+				<div class="service-box-item fl">
+					<div class="service-box-item__not">
+						<img class="service-box-item__bg" src="../static/image/bg-1.png" />
+						<img class="service-box-item__icon" src="../static/image/zekou.png" />
+						<div class="service-box-item__text">
+							<p>同行专家深度编辑</p>
+						</div>
+					</div>
+					<div class="service-box-item__active">
+						<p class="service-box-item__title">英文润色服务</p>
+						<p class="service-box-item__p">
+							修改语言语法及逻辑。使论文整体表达流
+							畅，文风专业，达到母语为英语的专业学
+							者写作水平。
+						</p>
+					</div>
+				</div>
+				<div class="service-box-item fl">
+					<div class="service-box-item__not">
+						<img class="service-box-item__bg" src="../static/image/bg-1.png" />
+						<img class="service-box-item__icon" src="../static/image/zekou.png" />
+						<div class="service-box-item__text">
+							<p>同行专家深度编辑</p>
+						</div>
+					</div>
+					<div class="service-box-item__active">
+						<p class="service-box-item__title">英文润色服务</p>
+						<p class="service-box-item__p">
+							修改语言语法及逻辑。使论文整体表达流
+							畅，文风专业，达到母语为英语的专业学
+							者写作水平。
+						</p>
+					</div>
+				</div>
+
+			</div>
+			<div class="app-btn" id="serviceBtn">
+				<a href="javascript:;" style="width: 100%; height: 100%;">收起</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- 服务流程 -->
+	<div class="process app-box">
+		<div class="w">
+			<div class="app-title">
+				<h3>服务流程</h3>
+			</div>
+			<ul class="process-box clearfix">
+				<li class="process-box-item fl">
+					<div class="process-box-icon">
+						<img class="__icon-not" src="../static/icon/liuc-1.png" />
+						<img class="__icon-active" src="../static/icon/liuc-1-active.png" />
+					</div>
+					<p class="process-box-text">客户递交稿件</p>
+					<p class="process-box-text">
+						英利文学术编辑进行估价
+					</p>
+					<p class="process-box-index">01</p>
+				</li>
+				<li class="process-box-item fl">
+					<div class="process-box-icon">
+						<img class="__icon-not" src="../static/icon/liuc-2.png" />
+						<img class="__icon-active" src="../static/icon/liuc-2-active.png" />
+					</div>
+					<p class="process-box-text">
+						客户收到报价
+
+					</p>
+					<p class="process-box-text">
+						在线付款
+					</p>
+					<p class="process-box-index">02</p>
+				</li>
+				<li class="process-box-item fl">
+					<div class="process-box-icon">
+						<img class="__icon-not" src="../static/icon/liuc-3.png" />
+						<img class="__icon-active" src="../static/icon/liuc-3-active.png" />
+					</div>
+					<p class="process-box-text">
+						英利文
+					</p>
+					<p class="process-box-text">
+						启动编辑工作
+					</p>
+					<p class="process-box-index">03</p>
+				</li>
+				<li class="process-box-item fl">
+					<div class="process-box-icon">
+						<img class="__icon-not" src="../static/icon/liuc-4.png" />
+						<img class="__icon-active" src="../static/icon/liuc-4-active.png" />
+					</div>
+					<p class="process-box-text">
+						客户收到完成的
+					</p>
+					<p class="process-box-text">
+						工作与发票
+					</p>
+					<p class="process-box-index">04</p>
+				</li>
+				<li class="process-box-item fl">
+					<div class="process-box-icon">
+						<img class="__icon-not" src="../static/icon/liuc-5.png" />
+						<img class="__icon-active" src="../static/icon/liuc-5-active.png" />
+					</div>
+					<p class="process-box-text">
+						后续服务支持
+					</p>
+					<p class="process-box-index">05</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- 质量保证 -->
+	<div class="app-box bg-b">
+		<div class="w">
+			<div class="app-title">
+				<h3>质量保证</h3>
+			</div>
+			<ul class="quality-box clearfix">
+				<li class="quality-box-item fl">
+					<div class="quality-box-icon">
+						<img class="not-icon" src="../static/icon/icon-zifu.png" alt="">
+						<img class="active-icon" src="../static/icon/icon-zifu-a.png" alt="">
+					</div>
+					<p class="quality-box-title">支付方式</p>
+					<p class="quality-box-text">
+						提供支付宝、银联卡、境内外<br>
+						信用卡等在线付款渠道
+					</p>
+
+					<div class="quality-box-btn">
+						<a href="###">了解更多</a>
+					</div>
+				</li>
+				<li class="quality-box-item fl">
+					<div class="quality-box-icon">
+						<img class="not-icon" src="../static/icon/icon-zilian.png" alt="">
+						<img class="active-icon" src="../static/icon/icon-zilian-a.png" alt="">
+					</div>
+					<p class="quality-box-title">质量保证</p>
+					<p class="quality-box-text">
+						100％英美母语编辑保证，若出<br>
+						现应修正而未修正等语法错<br>
+						误，免费重新修改
+					</p>
+
+					<div class="quality-box-btn">
+						<a href="###">了解更多</a>
+					</div>
+				</li>
+				<li class="quality-box-item fl">
+					<div class="quality-box-icon">
+						<img class="not-icon" src="../static/icon/icon-baoz.png" alt="">
+						<img class="active-icon" src="../static/icon/icon-baoz-a.png" alt="">
+					</div>
+					<p class="quality-box-title">保密保证</p>
+					<p class="quality-box-text">
+						英利文保证用户信息安全、<br>
+						支付信息安全以及文稿知识产权<br>
+						安全性
+					</p>
+
+					<div class="quality-box-btn">
+						<a href="###">了解更多</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- 编辑团队 -->
+	<div class="app-box bg-b">
+		<div class="w">
+			<div class="app-title">
+				<h3>编辑团队</h3>
+				<p class="app-title-text">英利文的编辑团队均招聘来源于下列顶尖研究院所和学府</p>
+			</div>
+			<ul class="edit-box clearfix">
+				<li class="edit-box-item fl">
+					<img src="../static/image/xue-1.png" alt="">
+					<p>哈佛大学</p>
+				</li>
+				<li class="edit-box-item fl">
+					<img src="../static/image/xue-1.png" alt="">
+					<p>哈佛大学</p>
+				</li>
+				<li class="edit-box-item fl">
+					<img src="../static/image/xue-1.png" alt="">
+					<p>哈佛大学</p>
+				</li>
+				<li class="edit-box-item fl">
+					<img src="../static/image/xue-1.png" alt="">
+					<p>哈佛大学</p>
+				</li>
+				<li class="edit-box-item fl">
+					<img src="../static/image/xue-1.png" alt="">
+					<p>哈佛大学</p>
+				</li>
+				<li class="edit-box-item fl">
+					<img src="../static/image/xue-2.png" alt="">
+					<p>斯坦福大学斯坦福大学</p>
+				</li>
+				<li class="edit-box-item fl">
+					<img src="../static/image/xue-2.png" alt="">
+					<p>斯坦福大学斯坦福大学</p>
+				</li>
+			</ul>
+
+			<div class="app-btn" id="teamBtn">
+				<a href="###">了解更多</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- 专精领域 -->
+	<div class="app-box bg-b">
+		<div class="w">
+			<div class="app-title">
+				<h3>编辑团队的专精领域</h3>
+			</div>
+			<ul class="field-box clearfix">
+				<li class="field-box-item fl">
+					<img src="../static/image/linyu-1.png" alt="">
+					<p>全科医学</p>
+				</li>
+				<li class="field-box-item fl">
+					<img src="../static/image/linyu-1.png" alt="">
+					<p>全科医学</p>
+				</li>
+				<li class="field-box-item fl">
+					<img src="../static/image/linyu-1.png" alt="">
+					<p>全科医学</p>
+				</li>
+				<li class="field-box-item fl">
+					<img src="../static/image/linyu-1.png" alt="">
+					<p>全科医学</p>
+				</li>
+				<li class="field-box-item fl">
+					<img src="../static/image/linyu-1.png" alt="">
+					<p>全科医学</p>
+				</li>
+				<li class="field-box-item fl">
+					<img src="../static/image/linyu-2.png" alt="">
+					<p>全科医学</p>
+				</li>
+				<li class="field-box-item fl">
+					<img src="../static/image/linyu-2.png" alt="">
+					<p>全科医学</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- 我们的客户 -->
+	<div class="app-box bg-h">
+		<div class="w">
+			<div class="app-title">
+				<h3>我们的客户</h3>
+			</div>
+			<ul class="client-box clearfix">
+				<li class="client-box-item fl">
+					<img src="../static/image/daxue-1.png" alt="">
+				</li>
+				<li class="client-box-item fl">
+					<img src="../static/image/daxue-2.png" alt="">
+				</li>
+				<li class="client-box-item fl">
+					<img src="../static/image/daxue-1.png" alt="">
+				</li>
+				<li class="client-box-item fl">
+					<img src="../static/image/daxue-1.png" alt="">
+				</li>
+				<li class="client-box-item fl">
+					<img src="../static/image/daxue-1.png" alt="">
+				</li>
+				<li class="client-box-item fl">
+					<img src="../static/image/daxue-1.png" alt="">
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="message app-box">
+		<div class="w">
+			<div class="app-title">
+				<h3>客户给我们的留言</h3>
+			</div>
+			<div class="swiper-container" style="width: 1052px; margin: 50px auto 0px auto; position: relative;">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="swiper-item">
+							<a class="message-item" href="###">
+								<p class="message-text">
+									“英利文的编辑团队服务的非常到位， 积累了很多的
+									优秀人才，翻译准确，团队真的很棒！”
+								</p>
+								<div class="message-box">
+									<span class="message-phone"> # 132****8794</span>
+									<span class="message-time">- 2020/10/30</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="swiper-item">
+							<a class="message-item" href="###">
+								<p class="message-text">
+									“英利文的编辑团队服务的非常到位， 积累了很多的
+									优秀人才，翻译准确，团队真的很棒！”
+								</p>
+								<div class="message-box">
+									<span class="message-phone"> # 132****8794</span>
+									<span class="message-time">- 2020/10/30</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="swiper-item">
+							<a class="message-item" href="###">
+								<p class="message-text">
+									“英利文的编辑团队服务的非常到位， 积累了很多的
+									优秀人才，翻译准确，团队真的很棒！”
+								</p>
+								<div class="message-box">
+									<span class="message-phone"> # 132****8794</span>
+									<span class="message-time">- 2020/10/30</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="swiper-item">
+							<a class="message-item" href="###">
+								<p class="message-text">
+									“英利文的编辑团队服务的非常到位， 积累了很多的
+									优秀人才，翻译准确，团队真的很棒！”
+								</p>
+								<div class="message-box">
+									<span class="message-phone"> # 132****8794</span>
+									<span class="message-time">- 2020/10/30</span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- 语言选择弹窗 -->
+	<div class="popup-box">
+		<div class="popup-box-item">English</div>
+		<div class="popup-box-item">中文</div>
+		<div class="popup-box-item">iếng Việt</div>
+		<div class="popup-box-close">x</div>
+	</div>
+
+	<!-- 公共页脚 -->
+	<footer class="footer-container">
+		<div class="w clearfix">
+			<div class="footer-content">
+				<div class="footer-logo">
+					<img src="../static/logo.png">
+					<span>专注生命科学领域的润色及科研培训机构</span>
+				</div>
+				<ul class="footer-box clearfix">
+					<li class="footer-item fl">
+						<a href="###" class="active ellipsis">英文润色</a>
+						<a href="###" class="ellipsis">标准英文润色</a>
+						<a href="###" class="ellipsis">无死角英文润色</a>
+						<a href="###" class="ellipsis">同行专家深度编辑</a>
+						<a href="###" class="ellipsis">润色编辑服务比较</a>
+					</li>
+					<li class="footer-item fl">
+						<a href="###" class="active ellipsis">投稿服务</a>
+						<a href="###" class="ellipsis">标准投稿套餐</a>
+						<a href="###" class="ellipsis">优质投稿套餐</a>
+						<a href="###" class="ellipsis">全程无忧投稿套餐</a>
+						<a href="###" class="ellipsis">中文论文投稿套餐</a>
+						<a href="###" class="ellipsis">个性化投稿套餐</a>
+						<a href="###" class="ellipsis">投稿套餐比较</a>
+					</li>
+					<li class="footer-item fl">
+						<a href="###" class="active ellipsis">学术翻译</a>
+						<a href="###" class="ellipsis">常规学术翻译</a>
+						<a href="###" class="ellipsis">高级学术翻译</a>
+						<a href="###" class="ellipsis">翻译套餐比较</a>
+					</li>
+					<li class="footer-item fl">
+						<a href="###" class="active ellipsis">科研培训服务</a>
+						<a href="###" class="ellipsis">论文发表&软件培训</a>
+						<a href="###" class="ellipsis">免费资源&学术资讯</a>
+					</li>
+					<li class="footer-item fl">
+						<a href="###" class="active ellipsis">科研传播服务</a>
+						<a href="###" class="ellipsis">科研同行传播服务</a>
+						<a href="###" class="ellipsis">媒体传播服务</a>
+						<a href="###" class="ellipsis">投资方传播服务</a>
+					</li>
+					<li class="footer-item fl">
+						<a href="###" class="active ellipsis">基金标书服务</a>
+						<a href="###" class="ellipsis">标书评估服务</a>
+						<a href="###" class="ellipsis">标书指导服务</a>
+						<a href="###" class="ellipsis">标书修改服务</a>
+					</li>
+					<li class="footer-item fl">
+						<a href="###" class="active ellipsis">关于我们</a>
+						<a href="###" class="ellipsis">公司简介</a>
+						<a href="###" class="ellipsis">客户反馈</a>
+						<a href="###" class="ellipsis">合作加盟</a>
+						<a href="###" class="ellipsis">最新消息</a>
+						<a href="###" class="ellipsis">常见问题</a>
+					</li>
+					<li class="footer-item fl">
+						<a href="###" class="active ellipsis">企业文稿润色</a>
+						<a href="###" class="active ellipsis">付款与发票</a>
+						<a href="###" class="active ellipsis">预存款及优惠</a>
+						<a href="###" class="active ellipsis">网站法律声明</a>
+						<a href="###" class="active ellipsis">隐私政策</a>
+					</li>
+					<li class="footer-item fl">
+						<a href="###" class="active ellipsis">英文润色</a>
+						<a href="###" class="ellipsis">标准英文润色</a>
+						<a href="###" class="ellipsis">无死角英文润色</a>
+						<a href="###" class="ellipsis">同行专家深度编辑</a>
+						<a href="###" class="ellipsis">润色编辑服务比较</a>
+					</li>
+				</ul>
+				<div class="footer-link clearfix">
+					<div class="footer-link-left fl">
+						<ul class="footer-link-ul">
+							<li class="footer-link-li fl">
+								<p class="__title">英利文咨询</p>
+								<p class="__text">1039444075</p>
+							</li>
+							<li class="footer-link-li fl">
+								<p class="__title">联系电话</p>
+								<p class="__text">4006521881</p>
+							</li>
+							<li class="footer-link-li fl">
+								<p class="__title">地址</p>
+								<p class="__text">北京市朝阳区南四环路125号一区1号楼8层8012</p>
+							</li>
+							<li class="footer-link-li fl">
+								<p class="__title">英利文微信</p>
+								<p class="__text">Enlivenedit</p>
+							</li>
+							<li class="footer-link-li fl">
+								<p class="__title">邮箱</p>
+								<p class="__text">info@enlivenedit.com</p>
+							</li>
+							<li class="footer-link-li fl">
+								<div class="footer-icon-zhihu">
+									<img src="../static/icon/icon-zhihu.png" />
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-link-right fr">
+						<div class="footer-link-code">
+							<img src="../static/image/code1.png" />
+							<p>微信公众号</p>
+						</div>
+						<div class="footer-link-code">
+							<img src="../static/image/code2.png" />
+							<p>客服微信</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-state">
+			<p class="footer-state-title">Copyright ©2002-2020 Cactus Communications. ALL Rights Reservid</p>
+			<p class="footer-state-text">工商注册号：91110108MA01RRB921 | 沪ICP备12028207号</p>
+			<p class="footer-state-text">
+				<img src="../static/icon/icon-guohui.png" alt="">
+				沪公网安备 31011502009358号
+			</p>
+		</div>
+	</footer>
+
+	<script src="../utils/jquery-3.5.1.min.js"></script>
+	<script src="../utils/swiper-3.4.2.jquery.min.js"></script>
+	<script src="../layui/layui.js"></script>
+	<script>
+		$(document).scroll(function () {
+			var scroH = $(document).scrollTop();
+			var navMain = $('#navBox');
+			var navBtn = navMain.find('.nav-btn');
+
+			if (scroH >= 70) {
+				navMain.addClass('active')
+				navBtn.addClass('active')
+			} else {
+				navMain.removeClass('active')
+				navBtn.removeClass('active')
+			}
+		})
+	</script>
+	<script>
+		layui.use('carousel', function () {
+			var carousel = layui.carousel;
+			//建造实例
+			carousel.render({
+				elem: '#test1',
+				width: '100%', //设置容器宽度
+				height: '700px',
+				autoplay: true,
+				arrow: 'always' //始终显示箭头
+				//,anim: 'updown' //切换动画方式
+			});
+		});
+	</script>
+	<script>
+		(function ($) {
+			var box = $('.service-box')
+			var btn = $('#serviceBtn')
+			var item = $('.service-box-item')
+			var height = box.height()
+			if (item.length <= 6) {
+				btn.hide();
+			}
+			btn.delegate('a', 'click', function () {
+				if ($(this).text() === '收起') {
+					box.animate({
+						height: '568px'
+					}, 300)
+					$(this).text('展开')
+				} else {
+					box.animate({
+						height: height
+					}, 300)
+					$(this).text('收起')
+				}
+			})
+		})(jQuery)
+	</script>
+	<script>
+		(function ($) {
+			var btn = $('#teamBtn');
+			var box = $('.edit-box');
+			var liDom = '';
+			btn.on('click', appendDom)
+			function appendDom() {
+				$.ajax({
+					url: '',
+					type: 'post',
+					success: function (res) {
+						if (res.data.length === 0) {
+							btn.hide();
+							return; // 如果没有数据
+						}
+
+						for (var i = 0; i < res.data.length; i++) {
+							liDom += '<li class="edit-box-item fl">' +
+								'<img src="' + /*图片数据*/ +'" alt="">' +
+								'<p>' + /* 学校名称 */ +'</p>' +
+								'</li>';
+						}
+						btn.hide();
+						box.append(liDom);
+					}
+				})
+			}
+		})(jQuery)
+	</script>
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+			slidesPerView: 2,
+			spaceBetween: 36,
+			autoplay: 2000,
+			loop: true
+		});
+	</script>
+	<script>
+		(function ($) {
+			/* 返回顶部 */
+			var backTop = $('#backTop')
+			//   运动总时长 
+			var time = 300
+			//   执行动画
+			backTop.on('click', function () {
+				$('html , body').animate({
+					scrollTop: 0
+				}, time);
+			})
+
+			/* 点击咨询微信 */
+			$('.scan-wx').click(function () {
+				$('.sidebar-item-popup').fadeToggle()
+			})
+		})(jQuery)
+	</script>
+</body>
+
+</html>

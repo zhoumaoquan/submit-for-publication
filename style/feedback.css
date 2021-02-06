@@ -1,0 +1,62 @@
+.feedback-box-item {
+    width: 560px;
+    height: 480px;
+    background-color: #ffffff;
+    margin-right: 48px;
+    margin-bottom: 48px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 45px 0px rgba(0, 0, 0, 0.16);
+}
+.feedback-box-item:nth-of-type(even) {
+    margin-right: 0;
+}
+.feedback-box-head {
+    width: 100%;
+    height: 336px;
+    box-sizing: border-box;
+    padding: 35px 30px;
+}
+.feedback-box-head p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #333333;
+    line-height: 34px;
+}
+.feedback-box-center {
+    box-sizing: border-box;
+    padding: 0 30px;
+    background-color: #4C97C3;
+    width: 100%;
+    height: 73px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 73px;
+}
+.feedback-box-bottom {
+    width: 100%;
+    height: 71px;
+    box-sizing: border-box;
+    padding: 0 30px;
+}
+.feedback-box-bottom .feedback-box-text {
+    font-size: 20px;
+    color: #666666;
+    font-weight: 400;
+    line-height: 71px;
+    max-width: 65%;
+}
+.feedback-box-bottom .score span {
+    font-size: 20px;
+    color: #666666;
+    font-weight: 400;
+    line-height: 71px;
+}
+.score-box,  .score-item{
+    display: inline-block;
+}
+.score-item , .score-item img{
+    width: 24px;
+    height: 24px;
+    vertical-align: text-bottom;
+}

@@ -1,0 +1,234 @@
+html,body {
+	min-height: 100%;
+	padding-bottom: 115px;
+	background: url('../static/ucenter/image/bg_login.png');
+	background-size: 100% 100%;
+}
+a {
+	cursor: pointer;
+}
+a:hover {
+	color: #4C97C3!important;
+}
+.logo {
+	width: 155px;
+	height: 155px;
+}
+.logo img {
+	width: 100%;
+	height: 100%;
+}
+.login-title {
+	text-align: center;
+	font-size: 40px;
+	font-weight: 500;
+	color: #4C97C3;
+}
+.login-box>section {
+	height: 770px;
+	background-color: #fff;
+	box-shadow: #999 10px 10px 30px 5px ;
+}
+.btn-confirm {
+	width: 448px;
+	height: 56px;
+	outline: none;
+	border: 0;
+	background-color: #4C97C3;
+	text-align: center;
+	line-height: 56px;
+	color: #fff;
+	font-size: 20px;
+	border-radius: 10px;
+}
+/* 登录 */
+.login-box .login {
+	height: 100%;
+}
+.login-box .login-l {
+	width: 50%;
+	height: 100%;
+}
+.login-box .login-r {
+	padding: 0 76px 48px;
+	width: 50%;
+	height: 100%;
+	box-sizing: border-box;
+}
+.login-r .login-title {
+	margin-top: 138px;
+}
+.login-r .form {
+	margin-top: 36px;
+}
+.form .form-item {
+	width: 448px;
+	margin-bottom: 24px;
+}
+.form .inp-label {
+	margin: 0  0 14px 4px;
+	font-size: 22px;
+	color: #666;
+}
+.form .inp-box {
+	position: relative;
+	margin-top: 10px;
+	border-radius: 2px;
+	box-sizing: border-box;
+}
+.form .inp-box img {
+	position: absolute;
+	left: 14px;
+	top: 14px;
+	width: 28px;
+	height: 28px;
+}
+.form .inp-box input {
+	display: inline-block;
+	padding-left: 75px;
+	height: 56px;
+	line-height: 28px;
+	vertical-align: middle;
+	font-size: 20px;
+	box-sizing: border-box;
+}
+
+.form .inp-box input:focus {
+      border: 1px solid #4C97C3 !important;
+      outline: none; 
+}
+.form .inp-box .line {
+	position: absolute;
+	left: 56px;
+	top: 18px;
+	width: 2px;
+	height: 22px;
+	background-color: #E1E1E1;
+	content: '';
+	border-radius: 1px;
+}
+.login .btn-confirm {
+	margin-top: 32px;
+}
+.login .forgetpsw {
+	margin-top: 24px;
+}
+.login .forgetpsw a {
+	font-size: 20px;
+	font-weight: 500;
+	color: #666666;
+}
+.login .btn-regist {
+	margin-top: 80px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 500;
+	color: #666666;
+}
+.login .btn-regist a {
+	color: #4C97C3;
+}
+
+/* 注册 */
+.regist {
+	display: none;
+	background-color: #fff;
+	padding: 52px 0 46px;
+	box-sizing: border-box;
+}
+.regist .form {
+	margin-top: 32px;
+}
+.regist .form > .form-box >div {
+	padding: 0 76px 0;
+	width: 50%;
+	box-sizing: border-box;
+}
+.form-right .agree {
+	margin-top: 10px;
+	color: #AEAEAE;
+}
+.form-right .agree a {
+	color: #4C97C3;
+}
+.vcode .inp-box {
+	display: inline-block;
+	margin-top: 0;
+}
+.vcode .inp-box input {
+	width: 300px;
+}
+.getcode, .getcode-fe, .getcode-fp {
+	width: 136px;
+	height: 56px;
+	line-height: 56px;
+	background: #4C97C3;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 500;
+	border: 0;
+}
+.login-box .vcode input {
+	padding-left: 14px;
+	width: 300px;
+}
+#code {
+	padding-left: 14px;
+}
+.regist .form .regist-confirm {
+	width: 100%;
+	padding: 0;
+	text-align: center;
+}
+.regist .form .btn-confirm {
+	margin: 60px 0 14px;
+}
+.regist .form .return {
+	width: 100%;
+	text-align: center;
+}
+.regist .return a {
+	font-size: 20px;
+	font-weight: 500;
+	color: #666666;
+}
+
+/* 忘记密码 */
+.forget {
+	display: none;
+	background-color: #fff;
+	padding: 44px 0 46px;
+	box-sizing: border-box;
+}
+.forget .forget-tab {
+	width: 468px;
+	margin: 22px auto 0;
+}
+.layui-tab-content {
+	padding-top: 30px;
+}
+.layui-tab-title > li {
+	width: 50%;
+	padding: 0;
+	font-size: 20px;
+	font-weight: 500;
+}
+.layui-tab-brief>.layui-tab-title .layui-this {
+	color: #4C97C3;
+}
+.layui-tab-brief>.layui-tab-title .layui-this:after {
+	border-color: #4C97C3;
+}
+.forget .vcode {
+	margin-top: -12px;
+}
+.forget .form .return {
+	width: 100%;
+	margin-top: 16px;
+	text-align: center;
+}
+.forget .return a {
+	font-size: 20px;
+	font-weight: 500;
+	color: #666666;
+}

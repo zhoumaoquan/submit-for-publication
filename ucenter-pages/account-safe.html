@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>英利文-账户安全</title>
+	<link rel="shortcut icon" href="../static/logo.png">
+	<link rel="stylesheet" href="../common/css/reset.css">
+	<link rel="stylesheet" href="../common/css/rem.css">
+	<link rel="stylesheet" href="../common/css/ucomm.css">
+	<link rel="stylesheet" href="../layui/css/layui.css">
+	<link rel="stylesheet" href="../style/account-safe.css">
+</head>
+<body>
+	<div class="wrap">
+		<nav class="side-bar">
+			<div class="avatar">
+				<img src="../static/logo.png" >
+			</div>
+			<ul class="navs">
+				<li><a href="user-msg.html"><img src="../static/ucenter/icon/unav1.png" >个人信息</a></li>
+				<li class="active"><a href="account-safe.html"><img src="../static/ucenter/icon/unav2.png" >账户安全</a></li>
+				<li><a href="choose-manu.html"><img src="../static/ucenter/icon/unav3.png" >提交稿件</a></li>
+				<li><a href="user-msg.html"><img src="../static/ucenter/icon/unav4.png" >我的稿件</a></li>
+				<li><a href="user-msg.html"><img src="../static/ucenter/icon/unav5.png" >我的账户</a></li>
+				<li><a href="user-msg.html"><img src="../static/ucenter/icon/unav6.png" >我的优惠</a></li>
+				<li><a href="user-msg.html"><img src="../static/ucenter/icon/unav7.png" >索要发票</a></li>
+			</ul>
+		</nav>
+		<main class="right-box">
+			<nav class="top-bar">
+				<div class="user">
+					小仙女
+					<img src="../static/ucenter/icon/avatar_default.png" >
+					<ul class="user-pop">
+						<li><a href="user-msg.html">个人信息</a></li>
+						<li><a>退出登录</a></li>
+					</ul>
+				</div>
+			</nav>
+			<div class="content-box">
+				<div class="content">
+					<h2 class="title">账户安全</h2>
+					<div class="set">
+						<div class="layui-tab layui-tab-brief">
+						  <ul class="layui-tab-title">
+						    <li class="layui-this">修改邮箱</li>
+						    <li>修改密码</li>
+						    <li>修改手机号</li>
+						  </ul>
+						  <div class="layui-tab-content">
+							<!-- 修改密码 -->
+						    <div class="layui-tab-item layui-show">
+								<form class="layui-form" action="" method="">
+									<div class="form">
+										<label class="form-item">原密码
+											<input type="password" required lay-vertype="tips" lay-verify="required" placeholder="请输入原登录密码" class="layui-input border">
+										</label>
+										<label class="form-item">新密码
+											<input type="password" required lay-vertype="tips" lay-verify="required" placeholder="请设置新登录密码" class="layui-input">
+										</label>
+										<label class="form-item">确认密码
+											<input type="password" required lay-vertype="tips" lay-verify="required" placeholder="请确认新登录密码" class="layui-input">
+										</label>
+									</div>
+									<div class="foot">
+										<button class="layui-btn btn-confirm" lay-submit lay-filter="formDemo">确认</button>
+									</div>
+								</form>
+							</div>
+							<!-- 修改邮箱 -->
+						    <div class="layui-tab-item">
+								<form class="layui-form" action="" method="">
+									<div class="form">
+										<label class="form-item">原邮箱
+											<div class="text">12123@123.com</div>
+										</label>
+										<label class="form-item">验证码
+											<div class="code">
+												<button type="button" class="getcode-eo">发送验证码</button>
+												<input type="password" required lay-vertype="tips" lay-verify="required" placeholder="请输入验证码" class="layui-input">
+											</div>
+										</label>
+										<label class="form-item">新邮箱
+											<input type="password" required lay-vertype="tips" lay-verify="required" placeholder="请输入新邮箱" class="layui-input">
+										</label>
+										<label class="form-item">验证码
+											<div class="code">
+												<button type="button" class="getcode-en">发送验证码</button>
+												<input type="password" required lay-vertype="tips" lay-verify="required" placeholder="请输入验证码" class="layui-input">
+											</div>
+										</label>
+									</div>
+									<div class="foot">
+										<button class="layui-btn btn-confirm" lay-submit lay-filter="formDemo">确认</button>
+									</div>
+								</form>
+							</div>
+							<!-- 修改手机号 -->
+						    <div class="layui-tab-item">
+								<form class="layui-form" action="" method="">
+									<div class="form">
+										<label class="form-item">原手机号
+											<div class="text">113062445566</div>
+										</label>
+										<label class="form-item">验证码
+											<div class="code">
+												<button type="button" class="getcode-po">发送验证码</button>
+												<input type="password" required lay-vertype="tips" lay-verify="required" placeholder="请输入验证码" class="layui-input">
+											</div>
+										</label>
+										<label class="form-item">新手机号
+											<input type="password" required lay-vertype="tips" lay-verify="required|phone" placeholder="请输入新手机号" class="layui-input">
+										</label>
+										<label class="form-item">验证码
+											<div class="code">
+												<button type="button" class="getcode-pn">发送验证码</button>
+												<input type="password" required lay-vertype="tips" lay-verify="required" placeholder="请输入验证码" class="layui-input">
+											</div>
+										</label>
+									</div>
+									<div class="foot">
+										<button class="layui-btn btn-confirm" lay-submit lay-filter="formDemo">确认</button>
+									</div>
+								</form>
+							</div>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<script src="../layui/layui.js"></script>
+	<script src="../utils/jquery-3.5.1.min.js"></script>
+	<script src="../js/account-safe.js" ></script>
+	<script type="text/javascript">
+		var userPop = $('.user .user-pop')
+		$('.user').hover(()=>userPop.show(), ()=>{
+			userPop.hide(300)
+		})
+		userPop.on('mouseenter', ()=>{
+			userPop.stop().show()
+		})
+	</script>
+</body>
